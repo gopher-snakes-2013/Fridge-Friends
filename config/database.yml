@@ -1,0 +1,8 @@
+
+development:
+  adapter: postgresql
+  database: fridge-friends_development
+
+test:
+  adapter: postgresql
+  database: fridge-friends_test
