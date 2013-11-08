@@ -38,6 +38,10 @@ group :testing do
   gem 'simplecov', require: false
 end
 
+group :test do
+  gem 'shoulda-matchers'
+end
+
 group :testing, :development do
   gem 'rspec-rails'
   gem 'better_errors'
