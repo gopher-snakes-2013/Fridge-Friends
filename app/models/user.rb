@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-  # attr_accessible :phone_number, :name, :customer_id
+  validates :name, presence: true
+  validates :phone_number, presence: true
   include Clearance::User
 end

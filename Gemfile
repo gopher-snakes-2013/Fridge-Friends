@@ -34,7 +34,8 @@ group :doc do
 end
 
 group :testing do
-  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end
 
 group :testing, :development do
