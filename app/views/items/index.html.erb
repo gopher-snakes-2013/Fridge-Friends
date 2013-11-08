@@ -1,6 +1,8 @@
 <h2><%= @fridge.name %></h2>
-
+<ul>
 <% @fridge.items.each  do |item| %>
-  <h3><%= item.name %></h3>
+  <li><%= item.name %></li>
+  <li><%= item.category %></li>
+  <%= button_to('Delete Item', fridge_item_path(item.fridge.id, item.id), method: 'delete') %>
 <% end %>
 
