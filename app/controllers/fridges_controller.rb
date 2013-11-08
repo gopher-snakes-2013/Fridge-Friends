@@ -12,6 +12,14 @@ class FridgesController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def destroy
+    Fridge.find(params[:id]).destroy
+    redirect_to :fridges
+  end
+
   private
   def fridge_params
     params.require(:fridge).permit(:name)
