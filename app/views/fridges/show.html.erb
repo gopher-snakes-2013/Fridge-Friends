@@ -1,6 +1,6 @@
 <h2><%= @fridge.name %></h2>
   <ul>
-    <%= @fridge.items.each do |item| %>
+    <% @fridge.items.each do |item| %>
       <li>Name: <%= item.name %></li>
       <li>Category: <%= item.category %></li>
     <% end %>
