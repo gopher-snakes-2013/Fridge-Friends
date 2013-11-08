@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+
+  <link rel="stylesheet" href="app.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="helper.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('body').responsive_util()
+      $('.toolbar a').on('click',function(event){
+        event.preventDefault()
+        console.log("clicked")
+      })
+
+    })
+  </script>
+
+</head>
+<body>
+
+  <form class="login">
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="textinput-s" placeholder="email" value="" data-clear-btn="true">
+    <label for="password">Password:</label>
+    <input type="text" name="password" id="password" placeholder="password" value="" data-clear-btn="true">
+    <input type="button" id="btn" value="Login">
+  </form>
+
+</body>
+</html>

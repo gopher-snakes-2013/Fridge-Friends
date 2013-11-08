@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <link rel="stylesheet" href="app.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="helper.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('body').responsive_util()
+      $('.toolbar a').on('click',function(event){
+        event.preventDefault()
+        console.log("clicked")
+      })
+
+    })
+  </script>
+
+</head>
+<body>
+  <div class="toolbar">
+    <h1>My Fridge</h1> <a href="#" class="menu button">|||</a>
+  </div>
+
+  <div id="content">
+    <div id="static-toolbar">
+
+    </div>
+    <div id="fridge-contents">
+      <ul>
+        <li>
+          <span>Checkbox</span>
+          <span>Name</span>
+          <span>Category</span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="menu-panel" class="panel" style="display:none;">
+    <p>stuff</p>
+  </div>
+</body>
+</html>
