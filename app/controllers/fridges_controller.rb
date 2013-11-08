@@ -1,6 +1,7 @@
 class FridgesController < ApplicationController
 
   def index
+    @fridge = Fridge.new
   end
 
   def create
@@ -13,6 +14,8 @@ class FridgesController < ApplicationController
   end
 
   def show
+    @fridge = Fridge.find(params[:id])
+    @items = @fridge.items.all
   end
 
   def destroy

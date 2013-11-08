@@ -1,1 +1,4 @@
-FridgeFriends!!!
+<%= form_for @fridge do |f| %>
+  <%= f.text_field :name, placeholder: 'Fridge Name' %>
+  <%= f.submit 'Add Fridge' %>
+<% end %>
