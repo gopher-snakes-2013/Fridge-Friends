@@ -1,0 +1,105 @@
+HTML {
+  font-family: "Helvetica";
+  background: #c6a6dd;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#c6a6dd), color-stop(100%,#788923));
+  background: -moz-linear-gradient(-45deg,  #c6a6dd 0%, #788923 100%);
+  background: -o-linear-gradient(-45deg,  #c6a6dd 0%,#788923 100%);
+  background: -ms-linear-gradient(-45deg,  #c6a6dd 0%,#788923 100%);
+}
+
+form {
+  padding:20px;
+  border-radius: 7px;
+  background-color: #FFF;
+  border: 1px solid #eee;
+  text-align:left;
+  margin: 50px auto;
+  box-shadow: 3px 3px 20px #555;
+}
+
+form label {
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 100px;
+}
+
+form.login {
+  max-width:350px;
+}
+
+form input {
+  margin: 3px 0px;
+  box-shadow: 1px 2px 4px -2px #aaa inset;
+  font-size: 1.3em;
+  border-radius: 7px;
+  padding:5px;
+  min-width: 222px;
+
+}
+
+form.login #btn {
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+}
+
+/****************************************/
+.toolbar {
+  box-shadow: -1px 3px 5px #444;
+  background-color: #FFF;
+  width:100%;
+  position:fixed;
+  margin:0px;
+  padding:5px 10px;
+  top: 0px;
+  left: 0px;
+}
+
+.toolbar h1 {
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+.toolbar a.button {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-size: 2em;
+}
+
+/*******************************************/
+#static-toolbar {
+  width: 50px;
+  height: 100%;
+  background-color: #000;
+}
+
+#static-toolbar .tile {
+  height: 50px;
+  border-bottom: 1px solid #777;
+  text-align: center;
+}
+
+@media only screen and (max-width: 34.99em){
+  /* mobile */
+}
+@media only screen and (min-width: 35em) and (max-width: 70em){
+  /* tablets and screens */
+}
+@media only screen and (min-width: 70.01em){
+  /* BIG */
+}
+/*
+320 480 4s
+320 568 5
+*/
+
+
+/*
+#FF994B orange-warmer
+#FFC6A0 dusty-peach  :)
+#ADFFEC cupertealo
+#62CC96 sage fish
+*/

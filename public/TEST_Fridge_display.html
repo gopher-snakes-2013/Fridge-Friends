@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
-  <link rel="stylesheet" href="app.css" />
+  <title>Fridge List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+
+  <link rel="stylesheet" href="app.css" />
+  <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
   <script type="text/javascript" src="helper.js"></script>
   <script type="text/javascript">
     $(function(){
@@ -18,46 +23,63 @@
 
 </head>
 <body>
-  <div class="toolbar">
-    <h1>My Fridge</h1> <a href="#" class="menu button">|||</a>
-  </div>
+  <div data-role="page">
+    <div data-role="header" class="toolbar" style="overflow:hidden;">
+      <h1>This is my Fridge</h1>
+      <a href="#settings-panel" data-icon="gear" class="ui-btn-right">Options</a>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-icon="add" >Add Fridge</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div><!-- /header -->
 
-  <div id="content">
-    <div id="static-toolbar">
+    <div data-role="content">
 
+      <div id="fridge-contents">
+        <ul data-role="listview" data-inset="true">
+          <li>
+            <a href="#"><span>Kitchen Fridge</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Man-cave Fridge</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Champagne Room Fridge</span></a>
+          </li>
+          <li>
+            <a href="#"><span>DBC Phase 3 Whiskey Cabinet</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Parent's House</span></a>
+          </li>
+
+        </ul>
+      </div>
+
+    <div id="settings-panel" class="panel" data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true">
+      <div>
+        <ul>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+        </ul>
+      </div>
     </div>
-    <div id="fridge-contents">
-      <ul>
-        <li>
-          <span>Checkbox</span>
-          <span>Name</span>
-          <span>Category</span>
-        </li>
-        <li>
-          <span></span>
-          <span></span>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-          <span></span>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-          <span></span>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-          <span></span>
-          <span></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div id="menu-panel" class="panel" style="display:none;">
-    <p>stuff</p>
-  </div>
+
+  </div><!-- /content -->
+
+
+  </div><!-- /page -->
+
+
 </body>
 </html>

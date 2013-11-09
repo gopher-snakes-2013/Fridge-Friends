@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fridge Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+
+  <link rel="stylesheet" href="app.css" />
+  <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+  <script type="text/javascript" src="helper.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('body').responsive_util()
+      $('.toolbar a').on('click',function(event){
+        event.preventDefault()
+        console.log("clicked")
+      })
+
+    })
+  </script>
+
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header" class="toolbar" style="overflow:hidden;">
+      <h1>This is my Fridge</h1>
+      <a href="#settings-panel" data-icon="gear" class="ui-btn-right">Options</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+
+      <div id="static-toolbar">
+
+      </div>
+
+      <div id="fridge-contents">
+        <ul data-role="listview" data-filter="true" data-filter-placeholder="Search this fridge...">
+          <li data-role="list-divider">
+            <span>Fruit & Vegetables</span>
+          </li>
+          <li>
+            <span>Checkbox</span>
+            <span>Name</span>
+            <span>Category</span>
+          </li>
+          <li>
+            <span>Checkbox</span>
+            <span>Name</span>
+            <span>Category</span>
+          </li>
+          <li>
+            <span>Checkbox</span>
+            <span>Name</span>
+            <span>Category</span>
+          </li>
+          <li data-role="list-divider">
+            <span>Meat & Poultry</span>
+          </li>
+          <li>
+            <span>Checkbox</span>
+            <span>Name</span>
+            <span>Category</span>
+          </li>
+          <li>
+            <span></span>
+            <span></span>
+            <span></span>
+          </li>
+          <li>
+            <span></span>
+            <span></span>
+            <span></span>
+          </li>
+          <li data-role="list-divider">
+            <span>Cheese, Eggs, & Dairy</span>
+            <span>Milk</span>
+            <span></span>
+          </li>
+          <li>
+            <span>eggs</span>
+            <span></span>
+            <span></span>
+          </li>
+        </ul>
+      </div>
+
+    <div id="settings-panel" class="panel" data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true">
+      <div>
+        <ul>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+          <li>stuff</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+
+  </div><!-- /page -->
+
+
+</body>
+</html>
