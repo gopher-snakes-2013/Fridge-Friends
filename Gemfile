@@ -47,6 +47,7 @@ group :testing, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'sextant'
 end
 
 # Use ActiveModel has_secure_password
