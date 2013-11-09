@@ -1,13 +1,82 @@
-<h2><%= @fridge.name %></h2>
-  <ul>
-    <% @fridge.items.each do |item| %>
-      <li>Name: <%= item.name %></li>
-      <li>Category: <%= item.category %></li>
-    <% end %>
-  </ul>
 
-<%= form_for [@fridge, @item] do |f| %>
-  <%= f.text_field :name, placeholder: 'Item Name' %>
-  <%= f.text_field :category, placeholder: 'Category' %>
-  <%= f.submit 'Add Item to Fridge' %>
-<% end %>
+  <ul>
+  </ul>
+  <div data-role="page" id="fridge-show">
+    <div data-role="header" class="toolbar" style="overflow:hidden;">
+      <h2><%= @fridge.name %></h2>
+      <a href="#settings-panel" data-icon="gear" class="ui-btn-right">Options</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+      <div>
+        <%= form_for [@fridge, @item] do |f| %>
+        <fieldset data-role="collapsible" data-theme="a" data-content-theme="d" data-iconpos="right" data-inset="false">
+              <legend>Add Item to Fridge</legend>
+          <%= f.text_field :name, placeholder: 'Item Name' %>
+          <%= f.text_field :category, placeholder: 'Category' %>
+          <%= f.submit 'Add Item to Fridge' %>
+
+          </fieldset>
+        <% end %>
+      </div>
+
+      <div id="fridge-contents">
+        <ul data-role="listview" data-filter="true" data-filter-placeholder="Search this fridge...">
+          <li data-role="list-divider">
+            <span>Fruits & Vegetables</span>
+          </li>
+          <% @fridge.items.each do |item| %>
+            <li>
+              <span><%= item.name %></span>
+              <span><%= item.category %></span>
+            </li>
+          <% end %>
+          <li data-role="list-divider">
+            <span>Meat & Poultry</span>
+          </li>
+          <% @fridge.items.each do |item| %>
+            <li>
+              <span><%= item.name %></span>
+              <span><%= item.category %></span>
+            </li>
+          <% end %>
+          <li data-role="list-divider">
+            <span>Cheese, Eggs, & Dairy</span>
+          </li>
+          <% @fridge.items.each do |item| %>
+            <li>
+              <span><%= item.name %></span>
+              <span><%= item.category %></span>
+            </li>
+          <% end %>
+          <li data-role="list-divider">
+            <span>Breads, Rice, & Pasta</span>
+          </li>
+          <% @fridge.items.each do |item| %>
+            <li>
+              <span><%= item.name %></span>
+              <span><%= item.category %></span>
+            </li>
+          <% end %>
+
+
+        </ul>
+      </div>
+
+  </div><!-- /content -->
+
+    <div id="settings-panel" class="panel" data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true">
+      <div>
+        <ul>
+          <% @fridge.items.each do |item| %>
+            <li>
+              <span><%= item.category %></span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+
+  </div><!-- /page -->
+

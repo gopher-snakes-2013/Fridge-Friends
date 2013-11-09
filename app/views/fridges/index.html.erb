@@ -1,10 +1,62 @@
-<h1>Fridges</h1>
 
-<% @fridges.each  do |fridge| %>
-  <h3><%= link_to fridge.name, fridge_path(fridge.id) %></h3>
-<% end %>
 
-<%= form_for @fridge do |f| %>
-  <%= f.text_field :name, placeholder: 'Fridge Name' %>
-  <%= f.submit 'Add Fridge' %>
-<% end %>
+
+  <div data-role="page">
+    <div data-role="header" class="toolbar" style="overflow:hidden;">
+      <h1>Fridges</h1>
+      <a href="#settings-panel" data-icon="gear" class="ui-btn-right">Options</a>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-icon="add" >Add Fridge</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div><!-- /header -->
+
+    <div data-role="content">
+      <div>
+        <%= form_for @fridge do |f| %>
+          <%= f.text_field :name, placeholder: 'Fridge Name' %>
+          <%= f.submit 'Add Fridge' %>
+        <% end %>
+      </div>
+
+      <div id="fridge-contents">
+        <ul data-role="listview" data-inset="true">
+
+        <% @fridges.each  do |fridge| %>
+          <li><%= link_to fridge.name, fridge_path(fridge.id) %></li>
+        <% end %>
+          <li>
+            <a href="#">Kitchen Fridge</a>
+          </li>
+          <li>
+            <a href="#">Man-cave Fridge</a>
+          </li>
+          <li>
+            <a href="#">Champagne Room Fridge</a>
+          </li>
+          <li>
+            <a href="#">DBC Phase 3 Whiskey Cabinet</a>
+          </li>
+          <li>
+            <a href="#">Parent's House</a>
+          </li>
+
+        </ul>
+      </div>
+
+  </div><!-- /content -->
+
+    <div id="settings-panel" class="panel" data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true">
+      <div>
+        <ul>
+          <% @fridges.each  do |fridge| %>
+          <li><%= link_to fridge.name, fridge_path(fridge.id) %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+
+
+  </div><!-- /page -->
+
